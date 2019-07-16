@@ -1,0 +1,262 @@
+
+/*********** General settings ***********/
+
+body{
+	background-color: lightblue;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+h1{
+	text-align: center;
+}
+
+.row::after {
+	content:"";
+	clear: both;
+	display: flex;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/* General column settings */
+.col{
+	float: left;
+	padding: 10px;
+	margin: 1% 0.5%;
+	border-radius: 5px;
+	/* Phone width */
+    width: 98%;
+}
+
+/*********** Specific elements ***********/
+
+.redText{
+	color:red;
+}
+
+.greenText{
+	color:green;
+}
+
+.boldText{
+	font-weight:bold;
+}
+
+.displayTagTable td, th{
+	text-align:center;
+	border: 1px solid black;
+	padding: 6px;
+}
+
+.pagelinks{
+	margin-left:35%;
+}
+
+.displayTagTable{
+	width:100%;
+}
+
+
+/*********** Issues ***********/
+.issueTable.issue{
+	border: solid 1px;
+}
+
+.issueTable {
+	border-collapse: collapse;
+	width: 100%;
+}
+.issueTable th{
+	border: solid 1px;
+	background-color: darkslategrey;
+	color:#f2f2f2;
+	border-color:black;
+	text-align:left;
+	font-size: 20px;
+	height: 40px;
+}
+
+.issueTable td{
+	border:solid 1px;
+	padding: 6px;
+	text-align:left;
+}
+
+.issueTable td.issueTitle{
+	padding:0;
+}
+
+.issueTable td.issueTitle input[type=submit]{
+	border:none;
+	background-color: lightgrey;
+	text-align: left;
+	font-size: 17px;
+	font-weight: bold;
+	width: 100%;
+	height: 40px;
+}
+
+.issueTable td.issueTitle input[type=submit]:hover{
+	background-color: darkgrey;
+}
+
+td.empty{
+	height: 20px;
+	border: none;
+}
+
+
+/*********** Heading and title bar ***********/
+
+.title{
+	background-color: darkslategrey;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color:#f2f2f2;
+	padding: 15px;
+	text-align: center;
+}
+
+.titlenav
+{	
+    text-align: left;
+	overflow: hidden;	
+	margin-left: auto; 
+	margin-right: auto;
+	background-color: grey;	
+
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.titlenav .userDetails
+{
+	display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+}
+
+.titlenav a
+{
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.titlenav a.logOff
+{
+	float: right;
+}
+
+.titlenav a:hover 
+{
+	background-color: #ddd;
+    color: black;
+}
+
+/*********** left nav ***********/
+
+.left {
+	display: none;
+	padding: 0;
+}
+
+.left.responsive{		
+	display: block;
+}
+.left.responsive ul{		
+	list-style-type: none;
+    margin: 0;    
+    padding: 0;
+}
+.left.responsive li a{
+    padding: 8px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    background-color: grey;
+    color: #f2f2f2;    
+	display: block;
+    text-decoration: none;
+}
+
+/*********** main  ***********/
+
+.middle textarea{
+	width:100%;
+}
+
+.middle{
+	background-color: white;
+}
+
+/*********** right column ***********/
+
+.right{
+	background-color: white;
+}
+
+/*********** Larger screen sizes ***********/
+
+/* Tablet widths: */
+@media only screen and (min-width: 600px) {
+    
+    .left{width: 24%;}
+    .middle{width: 74%;}
+    .right{width: 74%;}
+
+    .left {
+		display: block;
+		height:100vh;
+	}
+
+    .left ul
+	{		
+		list-style-type: none;
+	    margin: 0;    
+	    padding: 0;
+	}
+
+	.left li a{
+	    padding: 8px;
+	    margin-bottom: 2px;
+	    margin-top: 2px;
+	    background-color: grey;
+	    color: #f2f2f2;    
+		display: block;
+	    text-decoration: none;
+	}
+
+	.left li a:hover {
+	    background-color: #ddd;
+	    color: black;
+	}
+	.titlenav .icon
+	{
+		display: none;
+	}
+}
+
+/* PC widths:; */
+@media only screen and (min-width: 900px) {
+   
+    .left{width: 24%;}
+    .middle{width: 49%;}
+    .right{width: 24%;}
+
+    .left {
+		display: block;
+		height:100vh;
+	}
+
+}
